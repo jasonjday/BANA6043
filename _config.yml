@@ -1,24 +1,10 @@
-# Build settings
+# In _config.yml
+title: BANA6043 - Final Project
+author: Jashani DeSilva, Elayna Berry, Jason Day
+#logo: logo.png
+execute:
+  execute_notebooks: force
 
-name: bana6043
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - python>=3.8
-  - jupyterlab
-  - bokeh
-  - jupyter_bokeh
-  - matplotlib
-  - numpy
-  - pandas
-  - scipy
-  - seaborn
-  - scikit-learn
-  - sqlalchemy
-  - pip:
-    - blackcellmagic
-    - completejourney_py
-    - iqplot
-    - jupyterlab-spellchecker
-    - watermark
+# Add a bibtex file so that we can create citations
+#bibtex_bibfiles:
+  #- references.bib
