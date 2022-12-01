@@ -17,20 +17,24 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd               #Used for data manipulation, tidying data and conditional statements
-bokeh.io.output_notebook()        #Enable viewing Bokeh plots in the notebook and interactive
-import matplotlib.pyplot as plt   #Data visualization dictionary
-import numpy as np  
+campaign_18_redemptions.plot(
+    kind='line',
+    title='Coupon Redemption over time',
+    ylabel='Redemption Count',
+    xlabel='Month',
+    figsize=(15,3)
+);
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/m_/qj_5t76n7nd04vpk93_tlblr0000gp/T/ipykernel_12096/3630060786.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m               [0;31m#Used for data manipulation, tidying data and conditional statements[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0mbokeh[0m[0;34m.[0m[0mio[0m[0;34m.[0m[0moutput_notebook[0m[0;34m([0m[0;34m)[0m        [0;31m#Enable viewing Bokeh plots in the notebook and interactive[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      3[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m   [0;31m#Data visualization dictionary[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      4[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/var/folders/m_/qj_5t76n7nd04vpk93_tlblr0000gp/T/ipykernel_11602/1811728083.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m campaign_18_redemptions.plot(
+[0m[1;32m      2[0m     [0mkind[0m[0;34m=[0m[0;34m'line'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m     [0mtitle[0m[0;34m=[0m[0;34m'Coupon Redemption over time'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0mylabel[0m[0;34m=[0m[0;34m'Redemption Count'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0mxlabel[0m[0;34m=[0m[0;34m'Month'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mNameError[0m: name 'bokeh' is not defined
-NameError: name 'bokeh' is not defined
+[0;31mNameError[0m: name 'campaign_18_redemptions' is not defined
+NameError: name 'campaign_18_redemptions' is not defined
 

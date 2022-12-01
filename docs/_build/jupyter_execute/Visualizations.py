@@ -11,10 +11,6 @@
 
 
 import pandas as pd               #Used for data manipulation, tidying data and conditional statements
-import bokeh.io                   #bokeh is the main plotting package (submodules of bokeh must be explicitly imported)
-import bokeh.models               #bokeh.models helps turn dataframes and dictionaries into easily transformable data
-import bokeh.plotting             #this is the primary tool used to assemble plots
-import bokeh.transform            #function for computations such as a cumulative sum function
 bokeh.io.output_notebook()        #Enable viewing Bokeh plots in the notebook and interactive
 import matplotlib.pyplot as plt   #Data visualization dictionary
 import numpy as np  
@@ -24,7 +20,7 @@ import numpy as np
 
 # Since our focus is on how campaigns affected sales the following data frames were imported into Python:
 
-# In[2]:
+# In[13]:
 
 
 from completejourney_py import get_data
@@ -38,7 +34,7 @@ campaigns = cj_data['campaigns']
 
 # Once the completejourney data was imported into Python, the next step was to tidy the data. We were interested in discovering trends related to campaigns and how it affected sales. Therefore, we started with merging campaigns, demographics, transactions and products. 
 
-# In[3]:
+# In[14]:
 
 
 # merge campaigns, demographics, transactions on household_id
@@ -68,7 +64,7 @@ coupon_transactions = (
 )
 
 
-# In[4]:
+# In[15]:
 
 
 datetimes = pd.to_datetime(coupon_transactions['redemption_date'])
@@ -89,7 +85,7 @@ coupon_redemptions = coupon_redemptions.to_frame()
 
 # The first step we took to evaluate the effectiveness of campaigns was to find out the total sales achieved through each campaign.
 
-# In[5]:
+# In[16]:
 
 
 df_campaigns = df2.groupby(['campaign_id'],as_index=False).agg({'sales_value':'sum'}).sort_values(by = 'sales_value', ascending=False)
@@ -107,7 +103,7 @@ ax.set_xlabel('Sales');
 
 # We can now look at what times of the year coupons are most used.
 
-# In[6]:
+# In[17]:
 
 
 coupon_redemptions.plot(
@@ -123,7 +119,7 @@ coupon_redemptions.plot(
 
 # Now that we can see which campaigns are most effective, we can look at what customers are most valuable to target these campaigns towards.
 
-# In[7]:
+# In[18]:
 
 
 redemptions = (
@@ -139,27 +135,9 @@ redemptions.plot(
 );
 
 
-# ### Campaign sales for each age group in 2017
+# Sales patterns for campaigns 18, 13 and 8 according to each age group was observed.
 
-# Finally sales patterns for campaigns 18, 13 and 8 according to each age group was observed.
-
-# In[8]:
-
-
-df_campaigns_18['Transaction_Time'] = pd.to_datetime(df_campaigns_18['transaction_timestamp']).dt.time
-df_campaigns_18['Transaction_Date'] = pd.to_datetime(df_campaigns_18['transaction_timestamp']).dt.date
-cam18_age = df_campaigns_18.groupby(['age','Transaction_Date'],as_index=False).agg({'sales_value':'sum'})
-
-df_campaigns_13['Transaction_Time'] = pd.to_datetime(df_campaigns_13['transaction_timestamp']).dt.time
-df_campaigns_13['Transaction_Date'] = pd.to_datetime(df_campaigns_13['transaction_timestamp']).dt.date
-cam13_age = df_campaigns_13.groupby(['age','Transaction_Date'],as_index=False).agg({'sales_value':'sum'})
-
-df_campaigns_8['Transaction_Time'] = pd.to_datetime(df_campaigns_8['transaction_timestamp']).dt.time
-df_campaigns_8['Transaction_Date'] = pd.to_datetime(df_campaigns_8['transaction_timestamp']).dt.date
-cam8_age = df_campaigns_8.groupby(['age','Transaction_Date'],as_index=False).agg({'sales_value':'sum'})
-
-
-# In[38]:
+# In[29]:
 
 
 from bokeh.models import ColumnDataSource
@@ -287,6 +265,8 @@ homeowner_value
 
 homeowner_value.plot.bar(x='home_ownership', y='sales_value')
 
+
+# ## Environment
 
 # In[40]:
 
