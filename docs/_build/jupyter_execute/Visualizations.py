@@ -43,12 +43,6 @@ df1 = (
     .merge(transactions, how='inner', on='household_id')
 )
 
-# merging dataframe created above with products on product_id
-df2 = (
-   df1
-   .merge(products, how='inner', on='product_id')
-)
-
 # merge coupon_redmptions with domepgraphics on household_id and campaign_descriptions on campaign_id
 coupons = (
     cj_data['coupon_redemptions']
@@ -87,7 +81,7 @@ coupon_redemptions = coupon_redemptions.to_frame()
 # In[5]:
 
 
-df_campaigns = df2.groupby(['campaign_id'],as_index=False).agg({'sales_value':'sum'}).sort_values(by = 'sales_value', ascending=False)
+df_campaigns = df1.groupby(['campaign_id'],as_index=False).agg({'sales_value':'sum'}).sort_values(by = 'sales_value', ascending=False)
 
 ax =(df_campaigns
     .sort_values('sales_value')
@@ -114,6 +108,8 @@ coupon_redemptions.plot(
 );
 
 
+# From the above plot, it is clear that coupon redemptions are highest during the months of August and November. This may be due to the increase in purchases during back to school and the holiday seasons. Therefore, Regork may benefit from increasing coupons and campaigns during this time of the year.
+
 # ### Coupon Redemptions by Age Group
 
 # Now that we can see which campaigns are most effective, we can look at what customers are most valuable to target these campaigns towards.
@@ -134,9 +130,11 @@ redemptions.plot(
 );
 
 
-# Sales patterns for campaigns 18, 13 and 8 according to each age group was observed.
+# From the above plot, it is clear that coupon redemptions are mostly used by people within the age category of 45-54. Regork should prioritize this age group when sending out coupons promoting products.
 
 # ### Sales Value by Demographic
+
+# In this section we wanted to determine how the average sales value varied across the different demographics.
 
 # In[8]:
 
@@ -154,6 +152,8 @@ married_value
 
 married_value.plot.bar(x='marital_status', y='sales_value');
 
+
+# Average sales made between married and unmarried people remain quite similar with married people having a slightly higher sales value.
 
 # In[10]:
 
@@ -173,6 +173,8 @@ salary_value
 salary_value.plot.bar(x='income', y='sales_value');
 
 
+# Regork may benefit from sending more coupons to homes with lower incomes to increase spending power within those homes.
+
 # In[12]:
 
 
@@ -190,6 +192,8 @@ homeowner_value
 homeowner_value.plot.bar(x='home_ownership', y='sales_value');
 
 
+# Homeowners should be prioritized during promotional campaigns as they have the highest average sales values followed by renters.
+
 # In[14]:
 
 
@@ -205,6 +209,8 @@ age_group.plot(
     xlabel='Age Group',
 );
 
+
+# When considering the average sales made by each group, people within the ages of 35-64 spend more money. Therefore, it would be beneficial for Regork to prioritize these age groups during promotional campaigns and coupon distributions.
 
 # # Environment
 

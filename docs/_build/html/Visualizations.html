@@ -453,12 +453,6 @@ title="Print to PDF"
     <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;household_id&#39;</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="c1"># merging dataframe created above with products on product_id</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="p">(</span>
-   <span class="n">df1</span>
-   <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;product_id&#39;</span><span class="p">)</span>
-<span class="p">)</span>
-
 <span class="c1"># merge coupon_redmptions with domepgraphics on household_id and campaign_descriptions on campaign_id</span>
 <span class="n">coupons</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;coupon_redemptions&#39;</span><span class="p">]</span>
@@ -499,7 +493,7 @@ title="Print to PDF"
 <p>The first step we took to evaluate the effectiveness of campaigns was to find out the total sales achieved through each campaign.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_campaigns</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;campaign_id&#39;</span><span class="p">],</span><span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;sales_value&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;sales_value&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_campaigns</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;campaign_id&#39;</span><span class="p">],</span><span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;sales_value&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;sales_value&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">ax</span> <span class="o">=</span><span class="p">(</span><span class="n">df_campaigns</span>
     <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;sales_value&#39;</span><span class="p">)</span>
@@ -534,6 +528,7 @@ title="Print to PDF"
 <img alt="_images/Visualizations_17_0.png" src="_images/Visualizations_17_0.png" />
 </div>
 </div>
+<p>From the above plot, it is clear that coupon redemptions are highest during the months of August and November. This may be due to the increase in purchases during back to school and the holiday seasons. Therefore, Regork may benefit from increasing coupons and campaigns during this time of the year.</p>
 </section>
 <section id="coupon-redemptions-by-age-group">
 <h3>Coupon Redemptions by Age Group<a class="headerlink" href="#coupon-redemptions-by-age-group" title="Permalink to this headline">#</a></h3>
@@ -555,13 +550,14 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Visualizations_20_0.png" src="_images/Visualizations_20_0.png" />
+<img alt="_images/Visualizations_21_0.png" src="_images/Visualizations_21_0.png" />
 </div>
 </div>
-<p>Sales patterns for campaigns 18, 13 and 8 according to each age group was observed.</p>
+<p>From the above plot, it is clear that coupon redemptions are mostly used by people within the age category of 45-54. Regork should prioritize this age group when sending out coupons promoting products.</p>
 </section>
 <section id="sales-value-by-demographic">
 <h3>Sales Value by Demographic<a class="headerlink" href="#sales-value-by-demographic" title="Permalink to this headline">#</a></h3>
+<p>In this section we wanted to determine how the average sales value varied across the different demographics.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">married_value</span> <span class="o">=</span> <span class="p">(</span>
@@ -618,9 +614,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Visualizations_24_0.png" src="_images/Visualizations_24_0.png" />
+<img alt="_images/Visualizations_26_0.png" src="_images/Visualizations_26_0.png" />
 </div>
 </div>
+<p>Average sales made between married and unmarried people remain quite similar with married people having a slightly higher sales value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">salary_value</span> <span class="o">=</span> <span class="p">(</span>
@@ -728,9 +725,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Visualizations_26_0.png" src="_images/Visualizations_26_0.png" />
+<img alt="_images/Visualizations_29_0.png" src="_images/Visualizations_29_0.png" />
 </div>
 </div>
+<p>Regork may benefit from sending more coupons to homes with lower incomes to increase spending power within those homes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">homeowner_value</span> <span class="o">=</span> <span class="p">(</span>
@@ -797,9 +795,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Visualizations_28_0.png" src="_images/Visualizations_28_0.png" />
+<img alt="_images/Visualizations_32_0.png" src="_images/Visualizations_32_0.png" />
 </div>
 </div>
+<p>Homeowners should be prioritized during promotional campaigns as they have the highest average sales values followed by renters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_group</span> <span class="o">=</span> <span class="p">(</span>
@@ -817,9 +816,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Visualizations_29_0.png" src="_images/Visualizations_29_0.png" />
+<img alt="_images/Visualizations_34_0.png" src="_images/Visualizations_34_0.png" />
 </div>
 </div>
+<p>When considering the average sales made by each group, people within the ages of 35-64 spend more money. Therefore, it would be beneficial for Regork to prioritize these age groups during promotional campaigns and coupon distributions.</p>
 </section>
 </section>
 </section>
