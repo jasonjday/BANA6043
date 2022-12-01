@@ -17,9 +17,9 @@
 #     <td style="text-align: center">Jason Day</td>
 #   </tr>
 #   <tr>
-#     <td style="text-align: center"><a href="https://www.linkedin.com/in/elaynafranklin/"><img src="img/Linkdin_Logo.png" target="_blank"></a></td>
-#     <td style="text-align: center"><a href="https://www.linkedin.com/in/hashani-de-silva-18997882/"><img src="img/Linkedin_Logo.png" target="_blank"></a></td>
-#     <td style="text-align: center"><a href="https://www.linkedin.com/in/jasonjday"><img src="img/Linkedin_Logo.png" target="_blank"></a></td>
+#     <td style="text-align: center"><a href="https://www.linkedin.com/in/elaynafranklin/"><img src="img/LinkedIn_Logo.png" target="_blank"></a></td>
+#     <td style="text-align: center"><a href="https://www.linkedin.com/in/hashani-de-silva-18997882/"><img src="img/LinkedIn_Logo.png" target="_blank"></a></td>
+#     <td style="text-align: center"><a href="https://www.linkedin.com/in/jasonjday"><img src="img/LinkedIn_Logo.png" target="_blank"></a></td>
 #   </tr>
 # </table>
 
