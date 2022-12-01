@@ -8,7 +8,7 @@
 # In[1]:
 
 
-get_ipython().run_cell_magic('html', '', '<iframe src="https://mailuc-my.sharepoint.com/personal/berryer_mail_uc_edu/_layouts/15/embed.aspx?UniqueId=bd012d2b-6ae5-4945-8104-aa525dc29576&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="2022_BANA6043_berryerer_day2jn_desilvhm_finalprojectvideo.mp4"></iframe>')
+get_ipython().run_cell_magic('html', '', '<iframe src="https://mailuc-my.sharepoint.com/personal/berryer_mail_uc_edu/_layouts/15/embed.aspx?UniqueId=bd012d2b-6ae5-4945-8104-aa525dc29576&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Regork Presentation"></iframe>')
 
 
 # ## Written Summary
