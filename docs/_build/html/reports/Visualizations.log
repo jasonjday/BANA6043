@@ -32,7 +32,7 @@ cam8_age = df_campaigns_8.groupby(['age','Transaction_Date'],as_index=False).agg
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/m_/qj_5t76n7nd04vpk93_tlblr0000gp/T/ipykernel_10204/4078123064.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/m_/qj_5t76n7nd04vpk93_tlblr0000gp/T/ipykernel_10924/4078123064.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mdf_campaigns_18[0m[0;34m[[0m[0;34m'Transaction_Time'[0m[0;34m][0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mto_datetime[0m[0;34m([0m[0mdf_campaigns_18[0m[0;34m[[0m[0;34m'transaction_timestamp'[0m[0;34m][0m[0;34m)[0m[0;34m.[0m[0mdt[0m[0;34m.[0m[0mtime[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mdf_campaigns_18[0m[0;34m[[0m[0;34m'Transaction_Date'[0m[0;34m][0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mto_datetime[0m[0;34m([0m[0mdf_campaigns_18[0m[0;34m[[0m[0;34m'transaction_timestamp'[0m[0;34m][0m[0;34m)[0m[0;34m.[0m[0mdt[0m[0;34m.[0m[0mdate[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m [0mcam18_age[0m [0;34m=[0m [0mdf_campaigns_18[0m[0;34m.[0m[0mgroupby[0m[0;34m([0m[0;34m[[0m[0;34m'age'[0m[0;34m,[0m[0;34m'Transaction_Date'[0m[0;34m][0m[0;34m,[0m[0mas_index[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m.[0m[0magg[0m[0;34m([0m[0;34m{[0m[0;34m'sales_value'[0m[0;34m:[0m[0;34m'sum'[0m[0;34m}[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

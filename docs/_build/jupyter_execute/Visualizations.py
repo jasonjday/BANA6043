@@ -3,7 +3,9 @@
 
 # # Exploratory Data Analysis
 
-# ## Importing Required Modules
+# ## Required Packages and Libraries
+
+# To properly reproduce these visualizations you will need to use the following packages and libraries:
 
 # In[1]:
 
