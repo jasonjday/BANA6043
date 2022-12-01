@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction &#8212; Final Project</title>
+    <title>Exploratory Data Analysis &#8212; Final Project</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Exploratory Data Analysis" href="Visualizations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,8 +105,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
                     Introduction
                 </a>
             </li>
@@ -182,7 +181,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Introduction.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Average Sales by Age.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -225,7 +224,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/Introduction.ipynb"
+        <a href="_sources/Average Sales by Age.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -262,94 +261,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#meet-our-team">
-     Meet Our Team
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#regork-s-opportunity">
-     Regork’s Opportunity
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment">
-   Environment
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
+                <h1>Exploratory Data Analysis <a name="Section3"></a></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#meet-our-team">
-     Meet Our Team
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#regork-s-opportunity">
-     Regork’s Opportunity
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#environment">
-   Environment
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -357,54 +285,73 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
-<section id="meet-our-team">
-<h2>Meet Our Team<a class="headerlink" href="#meet-our-team" title="Permalink to this headline">#</a></h2>
-<table style="width:100%">
-  <tr>
-    <td style="text-align: center">  <img src="img/elayna_headshot.png"></td>
-    <td style="text-align: center">  <img src="img/hashani_headshot.png"></td>
-    <td style="text-align: center">  <img src="img/jason_headshot.png"></td>
-  </tr>
-  <tr>
-    <td style="text-align: center">Elayna Berry</td>
-    <td style="text-align: center">Hashani DeSilva</td>
-    <td style="text-align: center">Jason Day</td>
-  </tr>
-</table></section>
-<section id="regork-s-opportunity">
-<h2>Regork’s Opportunity<a class="headerlink" href="#regork-s-opportunity" title="Permalink to this headline">#</a></h2>
-<p>Regork has compiled data around campaigns, transactions, coupon redemption, and customers. We believe Regork can increase the effectiveness of their campaigns through identifying the most effective campaign for the right customer, at the right time. Improving the efficiency of campaigns helps to first lift sales. But campaigns also help build brand awareness and customer loyalty. By optimizing our campaign schedule, we believe Regork will see a higher return on investment.
-</p>
-<p>
-Some use promotional campaigns during the holidays while others, such as, Regork have campaigns that occur year-round. We evaluate the effectiveness of Regork’s campaigns by determining the top campaigns run by Regork and figuring out how to improve them. Our focus is to figure out how these campaigns affected sales, departments and whether it’s better to have year-round campaigns or holiday focused ones.
-</p>
-<p>
-For this project we used the [completejourney](https://bradleyboehmke.github.io/completejourney/articles/completejourney.html) data to answer our business problem. The data available on transactions, demographics, products and campaigns were combined to create one large data frame. Our group determined the campaigns that generate the highest revenue by finding the sum of sales for each campaign. We will discuss our findings in the Exploratory Data and Summary Sections.
-</p></section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="environment">
-<h1>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">#</a></h1>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>               <span class="c1">#Used for data manipulation, tidying data and conditional statements</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>   <span class="c1">#Data visualization dictionary</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                <span class="c1">#Foundational computing package that works faster than Python</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exploratory-data-analysis-a-name-section3-a">
+<h1>Exploratory Data Analysis <a name="Section3"></a><a class="headerlink" href="#exploratory-data-analysis-a-name-section3-a" title="Permalink to this headline">#</a></h1>
+<p>Since our focus is on how campaigns affected sales the following data frames were imported into Python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
-<span class="o">%</span><span class="k">watermark</span> -v -p jupyterlab
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">completejourney_py</span> <span class="kn">import</span> <span class="n">get_data</span>
+
+<span class="n">cj_data</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()</span>
+<span class="n">transactions</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;transactions&#39;</span><span class="p">]</span>
+<span class="n">demographics</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;demographics&#39;</span><span class="p">]</span>
+<span class="n">products</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;products&#39;</span><span class="p">]</span>
+<span class="n">coupons</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;coupons&#39;</span><span class="p">]</span>
+<span class="n">coupon_redemptions</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;coupon_redemptions&#39;</span><span class="p">]</span>
+<span class="n">campaigns</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;campaigns&#39;</span><span class="p">]</span>
+<span class="n">campaign_descriptions</span> <span class="o">=</span> <span class="n">cj_data</span><span class="p">[</span><span class="s1">&#39;campaign_descriptions&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once the completejourney data was imported into Python, the next step was to tidy the data. We were interested in discovering trends related to campaigns and how it affected sales. Therefore, we started with merging campaigns, demographics, transactions and products.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">campaigns</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">demographics</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;household_id&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;household_id&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># merge</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="p">(</span>
+   <span class="n">df1</span>
+   <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">products</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;product_id&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_group</span> <span class="o">=</span> <span class="p">(</span>
+<span class="n">df1</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;sales_value&#39;</span><span class="p">:</span> <span class="s1">&#39;mean&#39;</span><span class="p">})</span>
+<span class="p">)</span>
+<span class="n">age_group</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Average Sales by Age&#39;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Average Sales Value&#39;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Age Group&#39;</span><span class="p">,</span>
+<span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python implementation: CPython
-Python version       : 3.9.13
-IPython version      : 7.31.1
-
-jupyterlab: 3.4.4
-</pre></div>
+<img alt="_images/Average Sales by Age_5_0.png" src="_images/Average Sales by Age_5_0.png" />
 </div>
 </div>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<p>When considering the average sales made by each group, it is clear that people within the ages of 35-64 spend more money. Therefore, it would be beneficial for Regork to prioritize these age groups during promotional campaigns and coupon distributions.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -434,13 +381,6 @@ jupyterlab: 3.4.4
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="Visualizations.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exploratory Data Analysis</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
