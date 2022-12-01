@@ -1,7 +1,7 @@
 # In _config.yml
-title: BANA6043 - Final Project
-author: Jashani DeSilva, Elayna Berry, Jason Day
-#logo: logo.png
+title: Final Project
+author: Elayna Berry, Jashani DeSilva, Jason Day
+logo: img/logo.png
 execute:
   execute_notebooks: force
 

@@ -1,3 +1,6 @@
 # In _toc.yml
 format: jb-book
-root: final_project.ipynb
+root: Introduction
+chapters:
+- file: Visualizations
+- file: Summary
